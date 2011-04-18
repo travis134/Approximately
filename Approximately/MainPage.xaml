@@ -1,0 +1,152 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Approximately.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+ 
+        <!--Panorama control-->
+        
+        <controls:Panorama Title="approximately" Foreground="LightGoldenrodYellow">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="PanoramaBackground.png"/>
+            </controls:Panorama.Background>
+ 
+            <!--Panorama item one-->
+  
+            <controls:PanoramaItem Header="mass" Foreground="Black">
+                <!--Double line list with text wrapping-->
+                <Grid x:Name="LayoutConvertMass" Background="Transparent">
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="75"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Name="fromMassLabel" Text="from" FontSize="26"/>
+
+                    <TextBox Grid.Row="1" Name="inputMassValue"/>
+
+                    <toolkit:ListPicker  Height="80" Grid.Row="2" x:Name="fromListMassPicker"/>
+
+                    <TextBlock Grid.Row="3" Name="toMassLabel" Text="to" FontSize="26"/>
+
+                    <toolkit:ListPicker  Height="80" Grid.Row="4" x:Name="toListMassPicker"/>
+
+                    <TextBlock Grid.Row="5" Name="isAboutMassLabel" Text="is about" FontSize="26"/>
+
+                    <TextBlock Grid.Row="6" TextAlignment="Center" Name="answerMassLabel" FontSize="36" FontWeight="Bold"/>
+
+                    <TextBlock Grid.Row="7" TextAlignment="Center" Name="answerUnitMassLabel" FontSize="24"/>
+
+                    <Grid Grid.Row="8" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
+                        <adctl:AdControl Height="50" Width="300" ApplicationId="bb68fbc1-ad47-45b2-b045-0d5699d83b6b" AdUnitId="10016008" AdModel="Contextual" />
+                    </Grid>
+                </Grid>
+            </controls:PanoramaItem>
+ 
+            <!--Panorama item two-->
+            <!--Use 'Orientation="Horizontal"' to enable a panel that lays out horizontally-->
+            <controls:PanoramaItem Header="length" Foreground="Black">
+                <!--Double line list with image placeholder and text wrapping-->
+                <Grid x:Name="LayoutConvertLength" Background="Transparent">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="75"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Name="fromLengthLabel" Text="from" FontSize="26"/>
+
+                    <TextBox Grid.Row="1" Name="inputLengthValue"/>
+
+                    <toolkit:ListPicker  Height="80" Grid.Row="2" x:Name="fromListLengthPicker"/>
+
+                    <TextBlock Grid.Row="3" Name="toLengthLabel" Text="to" FontSize="26"/>
+
+                    <toolkit:ListPicker  Height="80" Grid.Row="4" x:Name="toListLengthPicker"/>
+
+                    <TextBlock Grid.Row="5" Name="isAboutLengthLabel" Text="is about" FontSize="26"/>
+
+                    <TextBlock Grid.Row="6" TextAlignment="Center" Name="answerLengthLabel" FontSize="36" FontWeight="Bold"/>
+
+                    <TextBlock Grid.Row="7" TextAlignment="Center" Name="answerUnitLengthLabel" FontSize="24"/>
+
+                    <Grid Grid.Row="8" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
+                        <adctl:AdControl Height="50" Width="300" ApplicationId="bb68fbc1-ad47-45b2-b045-0d5699d83b6b" AdUnitId="10016008" AdModel="Contextual" />
+                    </Grid>
+                    
+                </Grid>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="volume" Foreground="Black">
+                <!--Double line list with image placeholder and text wrapping-->
+                <Grid x:Name="LayoutConvertVolume" Background="Transparent">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="75"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Name="fromVolumeLabel" Text="from" FontSize="26"/>
+
+                    <TextBox Grid.Row="1" Name="inputVolumeValue"/>
+
+                    <toolkit:ListPicker  Height="80" Grid.Row="2" x:Name="fromListVolumePicker"/>
+
+                    <TextBlock Grid.Row="3" Name="toVolumeLabel" Text="to" FontSize="26"/>
+
+                    <toolkit:ListPicker  Height="80" Grid.Row="4" x:Name="toListVolumePicker"/>
+
+                    <TextBlock Grid.Row="5" Name="isAboutVolumeLabel" Text="is about" FontSize="26"/>
+
+                    <TextBlock Grid.Row="6" TextAlignment="Center" Name="answerVolumeLabel" FontSize="36" FontWeight="Bold"/>
+
+                    <TextBlock Grid.Row="7" TextAlignment="Center" Name="answerUnitVolumeLabel" FontSize="24"/>
+
+                    <Grid Grid.Row="8" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
+                        <adctl:AdControl Height="50" Width="300" ApplicationId="bb68fbc1-ad47-45b2-b045-0d5699d83b6b" AdUnitId="10016008" AdModel="Contextual" />
+                    </Grid>
+                    
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+ 
+    <!--Panorama-based applications should not show an ApplicationBar-->
+
+</phone:PhoneApplicationPage>
