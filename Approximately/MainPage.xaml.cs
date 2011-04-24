@@ -95,10 +95,7 @@ namespace Approximately
                         }
                     );
             }
-            else
-            {
-                measurementUnits = measurementUnitsFile.Load();
-            }
+            measurementUnits = measurementUnitsFile.Load();
 
             StorageHelper<MeasurementObject> measurementObjectsFile = new StorageHelper<MeasurementObject>("MeasurementObjects.xml");
             if (!measurementObjectsFile.Exists())
@@ -136,11 +133,8 @@ namespace Approximately
                         }
                     );
             }
-            else
-            {
-                measurementObjects = measurementObjectsFile.Load();
-            }
-
+            measurementObjects = measurementObjectsFile.Load();
+            
             updateUi();
         }
 
